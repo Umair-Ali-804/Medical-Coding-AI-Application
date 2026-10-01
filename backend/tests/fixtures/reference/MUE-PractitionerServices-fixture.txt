@@ -1,0 +1,19 @@
+"The edits in this MUE file are active for dates of service July 1, 2026 - September 30, 2026. This file should NOT be used by state Medicaid programs as their edit file.
+
+Current Procedural Terminology (CPT) codes, descriptions and other data only are copyright 2025 American Medical Association. All rights reserved.
+
+CPT® is a registered trademark of the American Medical Association.
+
+Applicable FARS\DFARS Restrictions Apply to Government Use.
+
+Fee schedules, relative value units, conversion factors and/or related components are not assigned by the AMA, are not part of CPT, and the AMA is not recommending their use. The AMA does not directly or indirectly practice medicine or dispense medical services. The AMA assumes no liability for the data contained or not contained herein."
+HCPCS/CPT Code	Practitioner Services MUE Values	MUE Rationale
+0001U	1	Code Descriptor / CPT Instruction
+0002M	1	Nature of Analyte
+20610	2	Clinical: Medicare Data
+90471	1	Code Descriptor / CPT Instruction
+90715	1	Code Descriptor / CPT Instruction
+93000	3	Clinical: Medicare Data
+99213	2	Clinical: Medicare Data
+A4490	4	Clinical: Medicaid Data
+J1100	120	Clinical: Medicare Data

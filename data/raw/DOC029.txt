@@ -1,0 +1,9 @@
+CLINIC NOTE
+Chief Complaint: Blood pressure follow-up.
+HPI: 50-year-old male presents for follow-up of hypertension. No history of diabetes. Denies headache, chest pain or vision changes.
+Family History: Mother with type 2 diabetes. Father with hypertension.
+Labs: Fasting glucose 92. HbA1c 5.3%.
+Assessment:
+1. Essential hypertension
+2. Family history of diabetes mellitus
+Plan: Continue amlodipine 5 mg daily. Annual glucose screening.

@@ -1,0 +1,259 @@
+{
+  "name": "Medical Coding - Document intake",
+  "nodes": [
+    {
+      "id": "c3c383a6-35ef-54c7-be69-ba1634441bca",
+      "name": "Receive document",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "fe5078c6-31f5-5126-9baa-d7ede5623f7e",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "clinical-document",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "notes": "POST multipart/form-data with field 'file' (PDF/DOCX/TXT) and optional 'encounter_type', 'external_id'."
+    },
+    {
+      "id": "fdeac9a8-eca3-5cf3-80a9-10c6634a1b45",
+      "name": "Upload to Medical Coding API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        300
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "medcodingApiKey",
+          "name": "Medical Coding API key"
+        }
+      },
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.MEDCODING_API_URL }}/api/v1/documents",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "file"
+            },
+            {
+              "name": "encounter_type",
+              "value": "={{ $json.body?.encounter_type || 'outpatient' }}"
+            },
+            {
+              "name": "external_id",
+              "value": "={{ $json.body?.external_id || '' }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000
+        }
+      }
+    },
+    {
+      "id": "db6ffee0-152d-504f-b390-586c0416cf11",
+      "name": "Extract, retrieve, code, validate",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        300
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "medcodingApiKey",
+          "name": "Medical Coding API key"
+        }
+      },
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.MEDCODING_API_URL }}/api/v1/documents/{{ $json.document_id }}/process",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "notes": "All AI logic (NLP, RAG, LLM, validation, confidence) runs in the Python service. n8n only orchestrates."
+    },
+    {
+      "id": "af6eb1f5-e77a-5185-b4fb-d231518e4f84",
+      "name": "Needs mandatory review?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "33f16697-aead-58e7-b261-44274129fc8c",
+              "leftValue": "={{ $json.review_route }}",
+              "rightValue": "mandatory",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "ed71c3e9-11bd-59c5-ab65-7f6f6cd57153",
+      "name": "Alert: mandatory review",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        180
+      ],
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.REVIEW_ALERT_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: `Document ${$json.document_id} needs MANDATORY coder review (${$json.suggestions} suggestions; routes: ${JSON.stringify($json.by_route)})` }) }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "notes": "Slack/Teams incoming webhook. Contains IDs and counts only - never clinical text."
+    },
+    {
+      "id": "805683fb-9252-559c-952b-ed8e02fd2f7c",
+      "name": "Standard review queue",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        960,
+        420
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "33ae5a8a-7e1a-5ba5-8a15-853e318ea628",
+      "name": "Respond with result",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        300
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ document_id: $('Extract, retrieve, code, validate').item.json.document_id, status: $('Extract, retrieve, code, validate').item.json.status, review_route: $('Extract, retrieve, code, validate').item.json.review_route, suggestions: $('Extract, retrieve, code, validate').item.json.suggestions }) }}",
+        "options": {
+          "responseCode": 202
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Receive document": {
+      "main": [
+        [
+          {
+            "node": "Upload to Medical Coding API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload to Medical Coding API": {
+      "main": [
+        [
+          {
+            "node": "Extract, retrieve, code, validate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract, retrieve, code, validate": {
+      "main": [
+        [
+          {
+            "node": "Needs mandatory review?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Needs mandatory review?": {
+      "main": [
+        [
+          {
+            "node": "Alert: mandatory review",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Standard review queue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alert: mandatory review": {
+      "main": [
+        [
+          {
+            "node": "Respond with result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Standard review queue": {
+      "main": [
+        [
+          {
+            "node": "Respond with result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {},
+  "active": false,
+  "id": "mcaiIntake0001",
+  "tags": []
+}

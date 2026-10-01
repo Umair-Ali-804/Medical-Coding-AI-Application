@@ -1,0 +1,29 @@
+# Production overlay: TLS termination with Caddy, no internal ports published.
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+services:
+  api:
+    ports: !reset []
+    environment:
+      ENVIRONMENT: production
+      LOG_JSON: "true"
+  frontend:
+    ports: !reset []
+  n8n:
+    ports: !reset []
+    environment:
+      N8N_PROTOCOL: https
+      N8N_SECURE_COOKIE: "true"
+  caddy:
+    image: caddy:2-alpine
+    ports: ["80:80", "443:443"]
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?set APP_DOMAIN}
+      N8N_DOMAIN: ${N8N_DOMAIN:?set N8N_DOMAIN}
+    volumes:
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on: [frontend, n8n]
+    restart: unless-stopped
+    networks: [backend]
+volumes:
+  caddy_data:

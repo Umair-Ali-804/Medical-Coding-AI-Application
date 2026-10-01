@@ -1,0 +1,19 @@
+{$APP_DOMAIN} {
+	encode zstd gzip
+	# Prometheus metrics are for the internal network only
+	@metrics path /metrics /api/v1/metrics
+	respond @metrics 404
+	# API docs are disabled in production by the backend itself
+	handle_path /backend/* {
+		reverse_proxy api:8000
+	}
+	reverse_proxy frontend:3000
+	header {
+		Strict-Transport-Security "max-age=63072000; includeSubDomains"
+		-Server
+	}
+}
+
+{$N8N_DOMAIN} {
+	reverse_proxy n8n:5678
+}

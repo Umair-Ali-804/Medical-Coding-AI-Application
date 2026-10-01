@@ -1,0 +1,11 @@
+DISCHARGE SUMMARY (synthetic)
+Admission diagnosis: Right upper quadrant pain, possible cholecystitis.
+Hospital course: 52-year-old female admitted with acute cholecystitis with cholelithiasis. Ultrasound showed gallstones with gallbladder wall thickening. She underwent laparoscopic cholecystectomy on hospital day 2 without complication. Postoperative course was uneventful. No evidence of choledocholithiasis. History of appendectomy in 2010.
+Procedures performed:
+1. Laparoscopic cholecystectomy
+Discharge diagnoses:
+1. Acute cholecystitis with cholelithiasis
+2. Essential hypertension
+3. Hypothyroidism
+Discharge medications: Levothyroxine 75 mcg daily, amlodipine 5 mg daily.
+Plan: Follow up with surgery in 2 weeks.

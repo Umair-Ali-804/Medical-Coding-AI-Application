@@ -1,0 +1,626 @@
+{
+  "config": {
+    "llm_provider": "heuristic",
+    "model": "retrieval-top1-v1",
+    "retrieval_version": "hybrid-rrf-v1:hash:BAAI/bge-small-en-v1.5:k8:lexical-only",
+    "kb_version": "2026",
+    "pipeline_version": "1.1.0"
+  },
+  "baselines": {
+    "retrieval_only": {
+      "metrics": {
+        "documents": 24,
+        "gold_codes": 48,
+        "predicted_codes": 48,
+        "precision": 0.9792,
+        "recall": 0.9792,
+        "f1": 0.9792,
+        "category_precision": 0.9783,
+        "category_recall": 0.9783,
+        "category_f1": 0.9783,
+        "exact_match_accuracy": 0.9167,
+        "unsupported_code_rate": 0.0,
+        "invalid_code_rate": 0.0,
+        "retrieval_recall": 0.7917,
+        "auto_accept_precision": 0.9787,
+        "auto_accept_share": 0.9792,
+        "mandatory_review_share": 0.0208,
+        "latency_ms_p50": 8.5,
+        "latency_ms_p95": 30,
+        "cost_per_document_usd": 0.0,
+        "error_breakdown": {
+          "extra_code": 1,
+          "retrieval_failure": 1
+        }
+      },
+      "documents": [
+        {
+          "document_id": "B01",
+          "gold": [
+            "E11.65",
+            "I10",
+            "Z79.84",
+            "Z79.85"
+          ],
+          "predicted": [
+            "E11.65",
+            "I10",
+            "Z79.84",
+            "Z79.85"
+          ],
+          "auto_accept": [
+            "E11.65",
+            "I10",
+            "Z79.84",
+            "Z79.85"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 26,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 25,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B02",
+          "gold": [
+            "I13.2",
+            "I50.32",
+            "N18.6",
+            "Z99.2"
+          ],
+          "predicted": [
+            "I50.32",
+            "N18.6",
+            "I13.2",
+            "Z99.2"
+          ],
+          "auto_accept": [
+            "I50.32",
+            "N18.6",
+            "I13.2",
+            "Z99.2"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 24,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 13,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B03",
+          "gold": [
+            "E78.5",
+            "I10"
+          ],
+          "predicted": [
+            "I10",
+            "E78.5"
+          ],
+          "auto_accept": [
+            "I10",
+            "E78.5"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 15,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 3,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B04",
+          "gold": [
+            "C50.912",
+            "Z79.811"
+          ],
+          "predicted": [
+            "C50.912",
+            "Z79.811"
+          ],
+          "auto_accept": [
+            "Z79.811"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 1,
+          "total_suggestions": 2,
+          "latency_ms": 11,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B05",
+          "gold": [
+            "S92.352A"
+          ],
+          "predicted": [
+            "S92.352A"
+          ],
+          "auto_accept": [
+            "S92.352A"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 30,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B06",
+          "gold": [
+            "J44.9",
+            "Z87.891"
+          ],
+          "predicted": [
+            "J44.9",
+            "Z87.891"
+          ],
+          "auto_accept": [
+            "J44.9",
+            "Z87.891"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 23,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 8,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B07",
+          "gold": [
+            "E78.5",
+            "F17.210"
+          ],
+          "predicted": [
+            "F17.210",
+            "E78.5"
+          ],
+          "auto_accept": [
+            "F17.210",
+            "E78.5"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 15,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 4,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B08",
+          "gold": [
+            "R51.9"
+          ],
+          "predicted": [
+            "R51.9"
+          ],
+          "auto_accept": [
+            "R51.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 3,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B09",
+          "gold": [
+            "N10"
+          ],
+          "predicted": [
+            "R50.9",
+            "N10"
+          ],
+          "auto_accept": [
+            "R50.9",
+            "N10"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 9,
+          "cost_usd": 0.0,
+          "errors": [
+            {
+              "type": "extra_code",
+              "predicted": "R50.9"
+            }
+          ]
+        },
+        {
+          "document_id": "B10",
+          "gold": [
+            "F02.B11",
+            "G30.0"
+          ],
+          "predicted": [
+            "G30.0",
+            "F02.B11"
+          ],
+          "auto_accept": [
+            "G30.0",
+            "F02.B11"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 7,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B11",
+          "gold": [
+            "Z34.83",
+            "Z3A.30"
+          ],
+          "predicted": [
+            "Z34.83",
+            "Z3A.30"
+          ],
+          "auto_accept": [
+            "Z34.83",
+            "Z3A.30"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 3,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B12",
+          "gold": [
+            "M17.0"
+          ],
+          "predicted": [
+            "M17.0"
+          ],
+          "auto_accept": [
+            "M17.0"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 4,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B13",
+          "gold": [
+            "M16.12"
+          ],
+          "predicted": [
+            "M16.12"
+          ],
+          "auto_accept": [
+            "M16.12"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 8,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B14",
+          "gold": [
+            "M54.41"
+          ],
+          "predicted": [
+            "M54.41"
+          ],
+          "auto_accept": [
+            "M54.41"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 18,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B15",
+          "gold": [
+            "R03.0",
+            "Z00.01"
+          ],
+          "predicted": [
+            "Z00.01",
+            "R03.0"
+          ],
+          "auto_accept": [
+            "Z00.01",
+            "R03.0"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 4,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B16",
+          "gold": [
+            "K63.5",
+            "Z12.11"
+          ],
+          "predicted": [
+            "Z12.11"
+          ],
+          "auto_accept": [
+            "Z12.11"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 0,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 1,
+          "cost_usd": 0.0,
+          "errors": [
+            {
+              "type": "retrieval_failure",
+              "gold": "K63.5"
+            }
+          ]
+        },
+        {
+          "document_id": "B17",
+          "gold": [
+            "E11.22",
+            "I13.0",
+            "I50.33",
+            "N18.32",
+            "Z79.4"
+          ],
+          "predicted": [
+            "I50.33",
+            "N18.32",
+            "E11.22",
+            "I13.0",
+            "Z79.4"
+          ],
+          "auto_accept": [
+            "I50.33",
+            "N18.32",
+            "E11.22",
+            "I13.0",
+            "Z79.4"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 51,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 5,
+          "latency_ms": 35,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B18",
+          "gold": [
+            "E11.3293"
+          ],
+          "predicted": [
+            "E11.3293"
+          ],
+          "auto_accept": [
+            "E11.3293"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 14,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 13,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B19",
+          "gold": [
+            "E86.0",
+            "J10.1"
+          ],
+          "predicted": [
+            "J10.1",
+            "E86.0"
+          ],
+          "auto_accept": [
+            "J10.1",
+            "E86.0"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 27,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 5,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B20",
+          "gold": [
+            "S61.210A"
+          ],
+          "predicted": [
+            "S61.210A"
+          ],
+          "auto_accept": [
+            "S61.210A"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 35,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B21",
+          "gold": [
+            "I25.118",
+            "I25.2"
+          ],
+          "predicted": [
+            "I25.118",
+            "I25.2"
+          ],
+          "auto_accept": [
+            "I25.118",
+            "I25.2"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 20,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B22",
+          "gold": [
+            "I10",
+            "Z86.73"
+          ],
+          "predicted": [
+            "Z86.73",
+            "I10"
+          ],
+          "auto_accept": [
+            "Z86.73",
+            "I10"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 5,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B23",
+          "gold": [
+            "E03.9",
+            "K21.00"
+          ],
+          "predicted": [
+            "E03.9",
+            "K21.00"
+          ],
+          "auto_accept": [
+            "E03.9",
+            "K21.00"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 15,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "B24",
+          "gold": [
+            "E11.621",
+            "L97.522",
+            "Z79.84"
+          ],
+          "predicted": [
+            "Z79.84",
+            "E11.621",
+            "L97.522"
+          ],
+          "auto_accept": [
+            "Z79.84",
+            "E11.621",
+            "L97.522"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 3,
+          "latency_ms": 15,
+          "cost_usd": 0.0,
+          "errors": []
+        }
+      ]
+    }
+  },
+  "split": "blind"
+}

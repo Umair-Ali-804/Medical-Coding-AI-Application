@@ -1,0 +1,9 @@
+DISCHARGE SUMMARY
+Hospital Course: 62-year-old male admitted with substernal chest pressure. Troponin rose from 0.08 to 1.9. EKG with ST depressions without ST elevation. Cardiac catheterization showed multivessel coronary artery disease and a drug-eluting stent was placed. He smokes 1 pack of cigarettes daily.
+Discharge Diagnoses:
+1. Non-ST elevation myocardial infarction (NSTEMI)
+2. Coronary artery disease
+3. Hyperlipidemia
+4. Nicotine dependence, cigarettes
+Discharge Medications: Aspirin, clopidogrel, atorvastatin 80 mg, metoprolol.
+Disposition: Home with cardiac rehab referral.

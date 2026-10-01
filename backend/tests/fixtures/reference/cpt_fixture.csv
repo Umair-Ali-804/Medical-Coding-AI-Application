@@ -1,0 +1,9 @@
+code,short_description,category,specialty,code_scope,code_type,status,effective_year,source
+99213,"Office/outpatient visit, established patient, low MDM",Evaluation & Management,Primary Care,Single,CPT,Active,2026,test
+99214,"Office/outpatient visit, established patient, moderate MDM",Evaluation & Management,Primary Care,Single,CPT,Active,2026,test
+20610,"Arthrocentesis, aspiration and/or injection, major joint",Surgery,Orthopedics,Single,CPT,Active,2026,test
+20610,"Arthrocentesis major joint (duplicate row)",Surgery,Sports Medicine,Single,CPT,Active,2026,test
+90715,"Tdap vaccine, 7 years or older, intramuscular",Medicine,Immunization,Single,CPT,Active,2026,test
+90471,"Immunization administration, one vaccine",Medicine,Immunization Admin,Single,CPT,Active,2026,test
+93000,"Electrocardiogram, routine, with interpretation and report",Medicine,Cardiology,Single,CPT,Active,2026,test
+12001-12007,"Simple repair of superficial wounds",Surgery,Dermatology,Range,CPT,Active,2026,test

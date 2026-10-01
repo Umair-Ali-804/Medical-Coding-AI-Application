@@ -1,0 +1,9 @@
+DISCHARGE SUMMARY
+Admission Diagnosis: Shortness of breath.
+Hospital Course: 71-year-old male with type 2 diabetes mellitus admitted with fever, productive cough and hypoxia with SpO2 84% on room air requiring 4 L oxygen. Chest x-ray showed right lower lobe consolidation. Blood and sputum cultures without growth. Treated with ceftriaxone and azithromycin with improvement. Weaned to room air on day 4.
+Discharge Medications: Metformin 500 mg twice daily, amoxicillin-clavulanate.
+Discharge Diagnoses:
+1. Pneumonia, unspecified organism
+2. Acute respiratory failure with hypoxia
+3. Type 2 diabetes mellitus without complications
+Disposition: Home.

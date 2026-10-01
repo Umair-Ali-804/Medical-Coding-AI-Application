@@ -1,0 +1,8 @@
+CLINIC NOTE
+Chief Complaint: Cough.
+HPI: 54-year-old female with 10 days of productive cough and chest congestion. No fever. Non-smoker.
+Physical Exam: Scattered rhonchi, no focal consolidation.
+Imaging: Chest x-ray negative for pneumonia.
+Assessment:
+1. Acute bronchitis. Pneumonia ruled out by chest x-ray.
+Plan: Supportive care, honey, dextromethorphan. Return if fever or dyspnea.

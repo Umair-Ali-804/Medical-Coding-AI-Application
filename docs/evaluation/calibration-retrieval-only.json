@@ -1,0 +1,21 @@
+{
+  "weights": {
+    "evidence": 2.0,
+    "retrieval": 2.0,
+    "validation": 3.0,
+    "entity": 1.5,
+    "agreement": 1.5,
+    "llm": 1.0
+  },
+  "bias": -5.0,
+  "threshold": 0.9739,
+  "source": "priors:n=25 (too few to fit)",
+  "metrics": {
+    "target_precision": 0.95,
+    "achieved_precision": 0.9545,
+    "support": 22,
+    "auto_standard_share": 0.88,
+    "recall_of_correct_at_threshold": 0.9545,
+    "n": 25
+  }
+}

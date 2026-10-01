@@ -1,0 +1,9 @@
+URGENT CARE NOTE (synthetic)
+Chief Complaint: Cut on left forearm.
+HPI: 34-year-old female cut her left forearm on broken glass while washing dishes at home 1 hour ago. Tetanus status unknown. No numbness or weakness. Denies other injuries.
+Exam: 2.5 cm simple laceration of the left forearm, no tendon involvement, neurovascularly intact.
+Procedure: Laceration repair. The wound was irrigated and repaired with simple interrupted sutures.
+Tdap vaccine administered.
+Assessment:
+1. Laceration without foreign body of left forearm, initial encounter
+Plan: Suture removal in 10 days. Wound care instructions given.

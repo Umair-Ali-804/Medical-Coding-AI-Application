@@ -1,0 +1,12 @@
+OFFICE VISIT NOTE (synthetic)
+Chief Complaint: Right knee pain, diabetes follow-up.
+HPI: 67-year-old male with type 2 diabetes mellitus and primary osteoarthritis of the right knee. Knee pain worse with stairs for 3 months. Denies fever, chest pain or shortness of breath. No history of gout. Father had coronary artery disease.
+Medications: Metformin 1000 mg twice daily, lisinopril 20 mg daily.
+Exam: Right knee crepitus, mild effusion, no erythema. BP 138/84. BMI 31.
+Procedure: Right knee intra-articular injection. After informed consent and sterile prep, the right knee joint was injected with dexamethasone sodium phosphate 8 mg and lidocaine. Patient tolerated the procedure well.
+Assessment:
+1. Primary osteoarthritis, right knee
+2. Type 2 diabetes mellitus without complications
+3. Essential hypertension
+4. Obesity
+Plan: Continue metformin. Home exercise program. Consider physical therapy referral; possible MRI of the right knee if no improvement. Return in 3 months.

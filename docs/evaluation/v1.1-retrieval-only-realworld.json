@@ -1,0 +1,800 @@
+{
+  "config": {
+    "llm_provider": "heuristic",
+    "model": "retrieval-top1-v1",
+    "retrieval_version": "hybrid-rrf-v1:hash:BAAI/bge-small-en-v1.5:k8:lexical-only",
+    "kb_version": "2026",
+    "pipeline_version": "1.1.0"
+  },
+  "baselines": {
+    "retrieval_only": {
+      "metrics": {
+        "documents": 31,
+        "gold_codes": 65,
+        "predicted_codes": 66,
+        "precision": 0.9848,
+        "recall": 1.0,
+        "f1": 0.9924,
+        "category_precision": 0.9844,
+        "category_recall": 1.0,
+        "category_f1": 0.9921,
+        "exact_match_accuracy": 0.9677,
+        "unsupported_code_rate": 0.0,
+        "invalid_code_rate": 0.0,
+        "retrieval_recall": 0.8462,
+        "auto_accept_precision": 0.9848,
+        "auto_accept_share": 0.9706,
+        "mandatory_review_share": 0.0,
+        "latency_ms_p50": 10,
+        "latency_ms_p95": 30,
+        "cost_per_document_usd": 0.0,
+        "error_breakdown": {
+          "extra_code": 1
+        }
+      },
+      "documents": [
+        {
+          "document_id": "RW01",
+          "gold": [
+            "E11.22",
+            "I12.9",
+            "N18.32",
+            "Z79.84"
+          ],
+          "predicted": [
+            "E11.22",
+            "N18.32",
+            "I12.9",
+            "Z79.84"
+          ],
+          "auto_accept": [
+            "E11.22",
+            "N18.32",
+            "I12.9",
+            "Z79.84"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 32,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 24,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW02",
+          "gold": [
+            "I13.0",
+            "I50.23",
+            "N18.4"
+          ],
+          "predicted": [
+            "I50.23",
+            "I13.0",
+            "N18.4"
+          ],
+          "auto_accept": [
+            "I50.23",
+            "I13.0",
+            "N18.4"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 42,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 3,
+          "latency_ms": 19,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW03",
+          "gold": [
+            "R05.9",
+            "R50.9"
+          ],
+          "predicted": [
+            "R05.9",
+            "R50.9"
+          ],
+          "auto_accept": [
+            "R05.9",
+            "R50.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 24,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 5,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW04",
+          "gold": [
+            "J18.9"
+          ],
+          "predicted": [
+            "J18.9"
+          ],
+          "auto_accept": [
+            "J18.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 32,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 5,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW05",
+          "gold": [
+            "M17.11"
+          ],
+          "predicted": [
+            "M17.11"
+          ],
+          "auto_accept": [
+            "M17.11"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 19,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW06",
+          "gold": [
+            "F17.210",
+            "J44.1"
+          ],
+          "predicted": [
+            "J44.1",
+            "F17.210"
+          ],
+          "auto_accept": [
+            "J44.1",
+            "F17.210"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 21,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 23,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW07",
+          "gold": [
+            "J45.41"
+          ],
+          "predicted": [
+            "J45.41",
+            "J06.9"
+          ],
+          "auto_accept": [
+            "J45.41",
+            "J06.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 17,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 8,
+          "cost_usd": 0.0,
+          "errors": [
+            {
+              "type": "extra_code",
+              "predicted": "J06.9"
+            }
+          ]
+        },
+        {
+          "document_id": "RW08",
+          "gold": [
+            "Z34.02",
+            "Z3A.20"
+          ],
+          "predicted": [
+            "Z34.02",
+            "Z3A.20"
+          ],
+          "auto_accept": [
+            "Z34.02",
+            "Z3A.20"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 3,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW09",
+          "gold": [
+            "S52.531A"
+          ],
+          "predicted": [
+            "S52.531A"
+          ],
+          "auto_accept": [
+            "S52.531A"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 38,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW10",
+          "gold": [
+            "S51.812A"
+          ],
+          "predicted": [
+            "S51.812A"
+          ],
+          "auto_accept": [
+            "S51.812A"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 33,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW11",
+          "gold": [
+            "I11.0",
+            "I50.23"
+          ],
+          "predicted": [
+            "I50.23",
+            "I11.0"
+          ],
+          "auto_accept": [
+            "I50.23",
+            "I11.0"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 8,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW12",
+          "gold": [
+            "E10.649"
+          ],
+          "predicted": [
+            "E10.649"
+          ],
+          "auto_accept": [
+            "E10.649"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 24,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 13,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW13",
+          "gold": [
+            "F33.1"
+          ],
+          "predicted": [
+            "F33.1"
+          ],
+          "auto_accept": [
+            "F33.1"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 4,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW14",
+          "gold": [
+            "E66.812",
+            "G47.33",
+            "Z68.36"
+          ],
+          "predicted": [
+            "G47.33",
+            "E66.812",
+            "Z68.36"
+          ],
+          "auto_accept": [
+            "G47.33",
+            "E66.812",
+            "Z68.36"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 23,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 3,
+          "latency_ms": 10,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW15",
+          "gold": [
+            "E03.9",
+            "E78.2",
+            "I48.0",
+            "Z79.01"
+          ],
+          "predicted": [
+            "I48.0",
+            "E78.2",
+            "E03.9",
+            "Z79.01"
+          ],
+          "auto_accept": [
+            "I48.0",
+            "E78.2",
+            "E03.9",
+            "Z79.01"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 32,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 10,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW16",
+          "gold": [
+            "J10.00"
+          ],
+          "predicted": [
+            "J10.00"
+          ],
+          "auto_accept": [
+            "J10.00"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 37,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 6,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW17",
+          "gold": [
+            "F02.80",
+            "G30.1"
+          ],
+          "predicted": [
+            "G30.1",
+            "F02.80"
+          ],
+          "auto_accept": [
+            "G30.1",
+            "F02.80"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 8,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW18",
+          "gold": [
+            "E86.0",
+            "E87.1",
+            "N17.9",
+            "N18.31"
+          ],
+          "predicted": [
+            "N17.9",
+            "N18.31",
+            "E86.0",
+            "E87.1"
+          ],
+          "auto_accept": [
+            "N17.9",
+            "N18.31",
+            "E86.0",
+            "E87.1"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 20,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 14,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW19",
+          "gold": [
+            "N39.0"
+          ],
+          "predicted": [
+            "N39.0"
+          ],
+          "auto_accept": [
+            "N39.0"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 2,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW20",
+          "gold": [
+            "Z12.11",
+            "Z80.0"
+          ],
+          "predicted": [
+            "Z12.11",
+            "Z80.0"
+          ],
+          "auto_accept": [
+            "Z12.11",
+            "Z80.0"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 5,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW21",
+          "gold": [
+            "E11.621",
+            "L97.411",
+            "Z79.4",
+            "Z79.84"
+          ],
+          "predicted": [
+            "E11.621",
+            "Z79.4",
+            "Z79.84",
+            "L97.411"
+          ],
+          "auto_accept": [
+            "E11.621",
+            "Z79.4",
+            "Z79.84",
+            "L97.411"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 17,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 30,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW22",
+          "gold": [
+            "R07.9"
+          ],
+          "predicted": [
+            "R07.9"
+          ],
+          "auto_accept": [
+            "R07.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 2,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW23",
+          "gold": [
+            "K35.80"
+          ],
+          "predicted": [
+            "K35.80"
+          ],
+          "auto_accept": [
+            "K35.80"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 24,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 22,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW24",
+          "gold": [
+            "I25.10",
+            "I25.2",
+            "Z87.891",
+            "Z95.5"
+          ],
+          "predicted": [
+            "I25.10",
+            "I25.2",
+            "Z87.891",
+            "Z95.5"
+          ],
+          "auto_accept": [
+            "I25.10",
+            "I25.2",
+            "Z87.891",
+            "Z95.5"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 35,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 14,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW25",
+          "gold": [
+            "E11.42",
+            "Z79.84",
+            "Z85.3"
+          ],
+          "predicted": [
+            "E11.42",
+            "Z85.3",
+            "Z79.84"
+          ],
+          "auto_accept": [
+            "E11.42",
+            "Z85.3",
+            "Z79.84"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 24,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 3,
+          "latency_ms": 19,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW26",
+          "gold": [
+            "I69.351",
+            "N39.0"
+          ],
+          "predicted": [
+            "N39.0",
+            "I69.351"
+          ],
+          "auto_accept": [
+            "N39.0",
+            "I69.351"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 11,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW27",
+          "gold": [
+            "J45.20",
+            "K21.9"
+          ],
+          "predicted": [
+            "K21.9",
+            "J45.20"
+          ],
+          "auto_accept": [
+            "K21.9",
+            "J45.20"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 6,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW28",
+          "gold": [
+            "E11.10",
+            "N17.9",
+            "Z79.4"
+          ],
+          "predicted": [
+            "E11.10",
+            "N17.9",
+            "Z79.4"
+          ],
+          "auto_accept": [
+            "E11.10",
+            "N17.9",
+            "Z79.4"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 25,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 3,
+          "latency_ms": 9,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW29",
+          "gold": [
+            "M54.42"
+          ],
+          "predicted": [
+            "M54.42"
+          ],
+          "auto_accept": [
+            "M54.42"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 15,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW30",
+          "gold": [
+            "Z00.00",
+            "Z80.3"
+          ],
+          "predicted": [
+            "Z00.00",
+            "Z80.3"
+          ],
+          "auto_accept": [
+            "Z00.00",
+            "Z80.3"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 8,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "RW31",
+          "gold": [
+            "D63.1",
+            "I12.9",
+            "N18.4"
+          ],
+          "predicted": [
+            "I12.9",
+            "D63.1",
+            "N18.4"
+          ],
+          "auto_accept": [
+            "I12.9",
+            "D63.1",
+            "N18.4"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 12,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 3,
+          "latency_ms": 10,
+          "cost_usd": 0.0,
+          "errors": []
+        }
+      ]
+    }
+  },
+  "split": "realworld"
+}

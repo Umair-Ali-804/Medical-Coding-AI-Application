@@ -1,0 +1,9 @@
+ENDOCRINOLOGY VISIT
+Chief Complaint: Elevated blood sugars.
+HPI: 64-year-old female with type 2 diabetes on insulin glargine 30 units nightly reports fasting glucose 220-260 over the past month. She also has hyperlipidemia on atorvastatin. She denies hypoglycemic episodes, numbness or visual changes.
+Medications: Insulin glargine 30 units at bedtime. Atorvastatin 40 mg daily.
+Labs: HbA1c 9.4%. LDL 128.
+Assessment:
+1. Type 2 diabetes mellitus with hyperglycemia
+2. Hyperlipidemia, unspecified
+Plan: Increase insulin glargine to 34 units. Diabetes education referral. Continue atorvastatin.

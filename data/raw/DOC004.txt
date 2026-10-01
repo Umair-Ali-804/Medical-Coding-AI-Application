@@ -1,0 +1,9 @@
+URGENT CARE NOTE
+Chief Complaint: Worsening shortness of breath.
+HPI: 67-year-old male with COPD presents with 3 days of increased dyspnea, cough and sputum production. He is a current smoker, one pack of cigarettes per day for 40 years. Denies fever or chest pain.
+Physical Exam: Diffuse expiratory wheezing. SpO2 91% on room air.
+Imaging: Chest x-ray shows hyperinflation, no infiltrate.
+Assessment:
+1. COPD with acute exacerbation
+2. Nicotine dependence, cigarettes
+Plan: Prednisone 40 mg daily for 5 days, azithromycin, albuterol nebulizer. Smoking cessation counseling provided.

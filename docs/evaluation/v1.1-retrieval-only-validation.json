@@ -1,0 +1,342 @@
+{
+  "config": {
+    "llm_provider": "heuristic",
+    "model": "retrieval-top1-v1",
+    "retrieval_version": "hybrid-rrf-v1:hash:BAAI/bge-small-en-v1.5:k8:lexical-only",
+    "kb_version": "2026",
+    "pipeline_version": "1.1.0"
+  },
+  "baselines": {
+    "retrieval_only": {
+      "metrics": {
+        "documents": 12,
+        "gold_codes": 25,
+        "predicted_codes": 25,
+        "precision": 0.96,
+        "recall": 0.96,
+        "f1": 0.96,
+        "category_precision": 0.96,
+        "category_recall": 0.96,
+        "category_f1": 0.96,
+        "exact_match_accuracy": 0.9167,
+        "unsupported_code_rate": 0.0,
+        "invalid_code_rate": 0.0,
+        "retrieval_recall": 0.96,
+        "auto_accept_precision": 0.96,
+        "auto_accept_share": 1.0,
+        "mandatory_review_share": 0.0,
+        "latency_ms_p50": 9.0,
+        "latency_ms_p95": 29,
+        "cost_per_document_usd": 0.0,
+        "error_breakdown": {
+          "missing_code": 1,
+          "extra_code": 1
+        }
+      },
+      "documents": [
+        {
+          "document_id": "DOC013",
+          "gold": [
+            "I48.91",
+            "Z79.01"
+          ],
+          "predicted": [
+            "I48.91",
+            "Z79.01"
+          ],
+          "auto_accept": [
+            "I48.91",
+            "Z79.01"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 17,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 16,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC014",
+          "gold": [
+            "I11.0",
+            "I50.9"
+          ],
+          "predicted": [
+            "I11.0",
+            "I50.9"
+          ],
+          "auto_accept": [
+            "I11.0",
+            "I50.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 32,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 27,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC015",
+          "gold": [
+            "E11.22",
+            "I12.9",
+            "N18.31",
+            "Z79.4"
+          ],
+          "predicted": [
+            "E11.22",
+            "I12.9",
+            "N18.31",
+            "Z79.4"
+          ],
+          "auto_accept": [
+            "E11.22",
+            "I12.9",
+            "N18.31",
+            "Z79.4"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 29,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 32,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC016",
+          "gold": [
+            "D50.9",
+            "Z80.0"
+          ],
+          "predicted": [
+            "D50.9",
+            "Z80.0"
+          ],
+          "auto_accept": [
+            "D50.9",
+            "Z80.0"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 24,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 7,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC017",
+          "gold": [
+            "G43.009"
+          ],
+          "predicted": [
+            "G43.009"
+          ],
+          "auto_accept": [
+            "G43.009"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 19,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 5,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC018",
+          "gold": [
+            "J01.90"
+          ],
+          "predicted": [
+            "J01.90"
+          ],
+          "auto_accept": [
+            "J01.90"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 4,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC019",
+          "gold": [
+            "S93.401A"
+          ],
+          "predicted": [
+            "S93.401A"
+          ],
+          "auto_accept": [
+            "S93.401A"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 8,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 11,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC020",
+          "gold": [
+            "E11.9",
+            "J18.9",
+            "J96.01",
+            "Z79.84"
+          ],
+          "predicted": [
+            "J18.9",
+            "J96.01",
+            "E11.9",
+            "Z79.84"
+          ],
+          "auto_accept": [
+            "J18.9",
+            "J96.01",
+            "E11.9",
+            "Z79.84"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 50,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 4,
+          "latency_ms": 29,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC021",
+          "gold": [
+            "A41.9",
+            "N39.0"
+          ],
+          "predicted": [
+            "N39.0",
+            "I95.9"
+          ],
+          "auto_accept": [
+            "N39.0",
+            "I95.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 32,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 7,
+          "cost_usd": 0.0,
+          "errors": [
+            {
+              "type": "missing_code",
+              "gold": "A41.9",
+              "note": "retrieved but not selected (reasoning)"
+            },
+            {
+              "type": "extra_code",
+              "predicted": "I95.9"
+            }
+          ]
+        },
+        {
+          "document_id": "DOC022",
+          "gold": [
+            "E66.9",
+            "R73.03",
+            "Z68.32"
+          ],
+          "predicted": [
+            "E66.9",
+            "R73.03",
+            "Z68.32"
+          ],
+          "auto_accept": [
+            "E66.9",
+            "R73.03",
+            "Z68.32"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 3,
+          "latency_ms": 6,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC023",
+          "gold": [
+            "E55.9"
+          ],
+          "predicted": [
+            "E55.9"
+          ],
+          "auto_accept": [
+            "E55.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 16,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 1,
+          "latency_ms": 3,
+          "cost_usd": 0.0,
+          "errors": []
+        },
+        {
+          "document_id": "DOC024",
+          "gold": [
+            "D50.9",
+            "N92.0"
+          ],
+          "predicted": [
+            "N92.0",
+            "D50.9"
+          ],
+          "auto_accept": [
+            "N92.0",
+            "D50.9"
+          ],
+          "unsupported": [],
+          "invalid": [],
+          "retrieved": 24,
+          "negated_predictions": [],
+          "mandatory": 0,
+          "total_suggestions": 2,
+          "latency_ms": 18,
+          "cost_usd": 0.0,
+          "errors": []
+        }
+      ]
+    }
+  },
+  "split": "validation"
+}

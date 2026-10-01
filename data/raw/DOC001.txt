@@ -1,0 +1,11 @@
+PRIMARY CARE FOLLOW-UP
+Chief Complaint: Follow-up of diabetes and blood pressure.
+HPI: 58-year-old male with type 2 diabetes mellitus and hypertension presents for routine follow-up. Home glucose readings 110-140. Denies chest pain, shortness of breath, polyuria or blurred vision. No evidence of diabetic complications on recent eye and foot exams.
+Medications: Metformin 1000 mg twice daily. Lisinopril 20 mg daily.
+Vitals: BP 128/78, HR 72, BMI 27.1.
+Physical Exam: Monofilament sensation intact bilaterally. Lungs clear.
+Labs: HbA1c 6.8%. Urine microalbumin normal. eGFR 88.
+Assessment:
+1. Type 2 diabetes mellitus without complications - continue metformin
+2. Essential hypertension - well controlled on lisinopril
+Plan: Recheck HbA1c in 3 months. Continue current regimen.

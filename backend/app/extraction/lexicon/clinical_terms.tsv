@@ -1,0 +1,408 @@
+# term	category	normalized
+# Curated clinical lexicon for deterministic entity recognition. Extend freely.
+# Matching is case-insensitive, whole-word, longest-match-first.
+# --- Endocrine / metabolic ---
+type 2 diabetes mellitus	condition	type 2 diabetes mellitus
+type ii diabetes mellitus	condition	type 2 diabetes mellitus
+type 2 diabetes	condition	type 2 diabetes mellitus
+type ii diabetes	condition	type 2 diabetes mellitus
+t2dm	condition	type 2 diabetes mellitus
+dm2	condition	type 2 diabetes mellitus
+dm ii	condition	type 2 diabetes mellitus
+niddm	condition	type 2 diabetes mellitus
+type 1 diabetes mellitus	condition	type 1 diabetes mellitus
+type 1 diabetes	condition	type 1 diabetes mellitus
+t1dm	condition	type 1 diabetes mellitus
+iddm	condition	type 1 diabetes mellitus
+diabetes mellitus	condition	diabetes mellitus
+diabetes	condition	diabetes mellitus
+gestational diabetes	condition	gestational diabetes mellitus
+prediabetes	condition	prediabetes
+diabetic neuropathy	condition	diabetic polyneuropathy
+diabetic peripheral neuropathy	condition	diabetic polyneuropathy
+diabetic polyneuropathy	condition	diabetic polyneuropathy
+diabetic nephropathy	condition	diabetic nephropathy
+diabetic kidney disease	condition	diabetic chronic kidney disease
+diabetic retinopathy	condition	diabetic retinopathy
+diabetic complications	condition	diabetic complications
+diabetic foot ulcer	condition	diabetic foot ulcer
+hyperglycemia	finding	hyperglycemia
+hypoglycemia	condition	hypoglycemia
+diabetic ketoacidosis	condition	diabetic ketoacidosis
+dka	condition	diabetic ketoacidosis
+hypothyroidism	condition	hypothyroidism
+hyperthyroidism	condition	hyperthyroidism
+hashimoto thyroiditis	condition	hashimoto thyroiditis
+hyperlipidemia	condition	hyperlipidemia
+hypercholesterolemia	condition	pure hypercholesterolemia
+dyslipidemia	condition	hyperlipidemia
+mixed hyperlipidemia	condition	mixed hyperlipidemia
+hypertriglyceridemia	condition	pure hyperglyceridemia
+obesity	condition	obesity
+morbid obesity	condition	morbid obesity
+severe obesity	condition	morbid obesity
+overweight	condition	overweight
+vitamin d deficiency	condition	vitamin d deficiency
+vitamin b12 deficiency	condition	vitamin b12 deficiency
+dehydration	condition	dehydration
+hypokalemia	condition	hypokalemia
+hyperkalemia	condition	hyperkalemia
+hyponatremia	condition	hyponatremia
+gout	condition	gout
+# --- Cardiovascular ---
+essential hypertension	condition	essential hypertension
+hypertension	condition	essential hypertension
+htn	condition	essential hypertension
+high blood pressure	condition	essential hypertension
+elevated blood pressure	finding	elevated blood pressure reading
+hypertensive heart disease	condition	hypertensive heart disease
+hypertensive chronic kidney disease	condition	hypertensive chronic kidney disease
+hypotension	condition	hypotension
+coronary artery disease	condition	atherosclerotic heart disease
+cad	condition	atherosclerotic heart disease
+atherosclerotic heart disease	condition	atherosclerotic heart disease
+angina	condition	angina pectoris
+unstable angina	condition	unstable angina
+myocardial infarction	condition	acute myocardial infarction
+nstemi	condition	non-st elevation myocardial infarction
+stemi	condition	st elevation myocardial infarction
+heart attack	condition	acute myocardial infarction
+atrial fibrillation	condition	atrial fibrillation
+afib	condition	atrial fibrillation
+a-fib	condition	atrial fibrillation
+paroxysmal atrial fibrillation	condition	paroxysmal atrial fibrillation
+persistent atrial fibrillation	condition	persistent atrial fibrillation
+atrial flutter	condition	atrial flutter
+congestive heart failure	condition	heart failure
+heart failure	condition	heart failure
+chf	condition	heart failure
+hfref	condition	systolic heart failure
+hfpef	condition	diastolic heart failure
+systolic heart failure	condition	systolic heart failure
+diastolic heart failure	condition	diastolic heart failure
+cardiomyopathy	condition	cardiomyopathy
+peripheral arterial disease	condition	peripheral vascular disease
+peripheral vascular disease	condition	peripheral vascular disease
+pad	condition	peripheral vascular disease
+deep vein thrombosis	condition	deep vein thrombosis
+dvt	condition	deep vein thrombosis
+pulmonary embolism	condition	pulmonary embolism
+varicose veins	condition	varicose veins
+tachycardia	finding	tachycardia
+bradycardia	finding	bradycardia
+palpitations	symptom	palpitations
+syncope	symptom	syncope
+chest pain	symptom	chest pain
+edema	finding	edema
+lower extremity edema	finding	edema
+murmur	finding	cardiac murmur
+stroke	condition	cerebral infarction
+cerebrovascular accident	condition	cerebral infarction
+cva	condition	cerebral infarction
+transient ischemic attack	condition	transient ischemic attack
+tia	condition	transient ischemic attack
+# --- Respiratory ---
+asthma	condition	asthma
+mild intermittent asthma	condition	mild intermittent asthma
+mild persistent asthma	condition	mild persistent asthma
+moderate persistent asthma	condition	moderate persistent asthma
+severe persistent asthma	condition	severe persistent asthma
+asthma exacerbation	condition	asthma with exacerbation
+copd	condition	chronic obstructive pulmonary disease
+chronic obstructive pulmonary disease	condition	chronic obstructive pulmonary disease
+copd exacerbation	condition	chronic obstructive pulmonary disease with acute exacerbation
+emphysema	condition	emphysema
+chronic bronchitis	condition	chronic bronchitis
+acute bronchitis	condition	acute bronchitis
+bronchitis	condition	bronchitis
+pneumonia	condition	pneumonia
+community acquired pneumonia	condition	pneumonia
+community-acquired pneumonia	condition	pneumonia
+aspiration pneumonia	condition	aspiration pneumonia
+upper respiratory infection	condition	acute upper respiratory infection
+upper respiratory tract infection	condition	acute upper respiratory infection
+uri	condition	acute upper respiratory infection
+common cold	condition	acute nasopharyngitis
+acute sinusitis	condition	acute sinusitis
+sinusitis	condition	sinusitis
+chronic sinusitis	condition	chronic sinusitis
+pharyngitis	condition	acute pharyngitis
+acute pharyngitis	condition	acute pharyngitis
+strep throat	condition	streptococcal pharyngitis
+streptococcal pharyngitis	condition	streptococcal pharyngitis
+tonsillitis	condition	acute tonsillitis
+allergic rhinitis	condition	allergic rhinitis
+seasonal allergic rhinitis	condition	allergic rhinitis due to pollen
+influenza	condition	influenza
+covid-19	condition	covid-19
+covid	condition	covid-19
+sars-cov-2 infection	condition	covid-19
+obstructive sleep apnea	condition	obstructive sleep apnea
+osa	condition	obstructive sleep apnea
+sleep apnea	condition	sleep apnea
+pleural effusion	finding	pleural effusion
+respiratory failure	condition	respiratory failure
+acute respiratory failure	condition	acute respiratory failure
+hypoxia	finding	hypoxemia
+hypoxemia	finding	hypoxemia
+cough	symptom	cough
+shortness of breath	symptom	shortness of breath
+sob	symptom	shortness of breath
+dyspnea	symptom	dyspnea
+dyspnea on exertion	symptom	dyspnea
+wheezing	symptom	wheezing
+hemoptysis	symptom	hemoptysis
+# --- GI ---
+gastroesophageal reflux disease	condition	gastro-esophageal reflux disease
+gerd	condition	gastro-esophageal reflux disease
+acid reflux	condition	gastro-esophageal reflux disease
+esophagitis	condition	esophagitis
+gastritis	condition	gastritis
+peptic ulcer	condition	peptic ulcer
+gastroenteritis	condition	gastroenteritis
+viral gastroenteritis	condition	viral gastroenteritis
+irritable bowel syndrome	condition	irritable bowel syndrome
+ibs	condition	irritable bowel syndrome
+crohn's disease	condition	crohn's disease
+ulcerative colitis	condition	ulcerative colitis
+diverticulitis	condition	diverticulitis
+diverticulosis	condition	diverticulosis
+constipation	symptom	constipation
+diarrhea	symptom	diarrhea
+nausea	symptom	nausea
+vomiting	symptom	vomiting
+nausea and vomiting	symptom	nausea with vomiting
+abdominal pain	symptom	abdominal pain
+epigastric pain	symptom	epigastric pain
+right lower quadrant pain	symptom	right lower quadrant pain
+appendicitis	condition	acute appendicitis
+acute appendicitis	condition	acute appendicitis
+cholecystitis	condition	cholecystitis
+cholelithiasis	condition	cholelithiasis
+gallstones	condition	cholelithiasis
+pancreatitis	condition	pancreatitis
+fatty liver	condition	fatty liver
+cirrhosis	condition	cirrhosis of liver
+hepatitis c	condition	chronic viral hepatitis c
+gi bleed	condition	gastrointestinal hemorrhage
+gastrointestinal bleeding	condition	gastrointestinal hemorrhage
+dysphagia	symptom	dysphagia
+hemorrhoids	condition	hemorrhoids
+# --- Renal / GU ---
+chronic kidney disease	condition	chronic kidney disease
+ckd	condition	chronic kidney disease
+chronic kidney disease stage 3a	condition	chronic kidney disease stage 3a
+chronic kidney disease stage 3b	condition	chronic kidney disease stage 3b
+chronic kidney disease stage 3	condition	chronic kidney disease stage 3
+chronic kidney disease stage 4	condition	chronic kidney disease stage 4
+chronic kidney disease stage 5	condition	chronic kidney disease stage 5
+ckd stage 3a	condition	chronic kidney disease stage 3a
+ckd stage 3b	condition	chronic kidney disease stage 3b
+ckd stage 3	condition	chronic kidney disease stage 3
+ckd stage 4	condition	chronic kidney disease stage 4
+ckd stage 5	condition	chronic kidney disease stage 5
+end stage renal disease	condition	end stage renal disease
+esrd	condition	end stage renal disease
+acute kidney injury	condition	acute kidney failure
+aki	condition	acute kidney failure
+acute renal failure	condition	acute kidney failure
+urinary tract infection	condition	urinary tract infection
+uti	condition	urinary tract infection
+cystitis	condition	cystitis
+acute cystitis	condition	acute cystitis
+pyelonephritis	condition	pyelonephritis
+kidney stone	condition	calculus of kidney
+nephrolithiasis	condition	calculus of kidney
+benign prostatic hyperplasia	condition	benign prostatic hyperplasia
+bph	condition	benign prostatic hyperplasia
+dysuria	symptom	dysuria
+hematuria	finding	hematuria
+urinary incontinence	symptom	urinary incontinence
+erectile dysfunction	condition	erectile dysfunction
+# --- Musculoskeletal ---
+osteoarthritis	condition	osteoarthritis
+primary osteoarthritis	condition	primary osteoarthritis
+rheumatoid arthritis	condition	rheumatoid arthritis
+osteoporosis	condition	osteoporosis
+low back pain	symptom	low back pain
+lower back pain	symptom	low back pain
+back pain	symptom	back pain
+lumbago	symptom	low back pain
+sciatica	condition	sciatica
+neck pain	symptom	cervicalgia
+cervicalgia	symptom	cervicalgia
+knee pain	symptom	knee pain
+shoulder pain	symptom	shoulder pain
+hip pain	symptom	hip pain
+joint pain	symptom	arthralgia
+arthralgia	symptom	arthralgia
+myalgia	symptom	myalgia
+fibromyalgia	condition	fibromyalgia
+ankle sprain	condition	sprain of ankle
+sprain	condition	sprain
+fracture	condition	fracture
+carpal tunnel syndrome	condition	carpal tunnel syndrome
+plantar fasciitis	condition	plantar fasciitis
+rotator cuff tear	condition	rotator cuff tear
+# --- Neuro / psych ---
+migraine	condition	migraine
+migraine headache	condition	migraine
+headache	symptom	headache
+tension headache	condition	tension-type headache
+seizure	symptom	seizure
+epilepsy	condition	epilepsy
+dizziness	symptom	dizziness
+vertigo	symptom	vertigo
+peripheral neuropathy	condition	polyneuropathy
+neuropathy	condition	polyneuropathy
+dementia	condition	dementia
+alzheimer's disease	condition	alzheimer's disease
+parkinson's disease	condition	parkinson's disease
+multiple sclerosis	condition	multiple sclerosis
+insomnia	condition	insomnia
+major depressive disorder	condition	major depressive disorder
+depression	condition	depression
+mdd	condition	major depressive disorder
+generalized anxiety disorder	condition	generalized anxiety disorder
+gad	condition	generalized anxiety disorder
+anxiety	condition	anxiety
+panic disorder	condition	panic disorder
+bipolar disorder	condition	bipolar disorder
+schizophrenia	condition	schizophrenia
+ptsd	condition	post-traumatic stress disorder
+post-traumatic stress disorder	condition	post-traumatic stress disorder
+adhd	condition	attention-deficit hyperactivity disorder
+attention deficit hyperactivity disorder	condition	attention-deficit hyperactivity disorder
+alcohol use disorder	condition	alcohol dependence
+alcohol dependence	condition	alcohol dependence
+alcohol abuse	condition	alcohol abuse
+opioid use disorder	condition	opioid dependence
+tobacco use	condition	tobacco use
+tobacco dependence	condition	nicotine dependence
+nicotine dependence	condition	nicotine dependence
+smoker	condition	nicotine dependence, cigarettes
+current smoker	condition	nicotine dependence, cigarettes
+smokes cigarettes	condition	nicotine dependence, cigarettes
+cigarette smoking	condition	nicotine dependence, cigarettes
+former smoker	condition	personal history of nicotine dependence
+# --- Heme / onc / ID ---
+anemia	condition	anemia
+iron deficiency anemia	condition	iron deficiency anemia
+thrombocytopenia	condition	thrombocytopenia
+leukocytosis	finding	leukocytosis
+breast cancer	condition	malignant neoplasm of breast
+lung cancer	condition	malignant neoplasm of lung
+prostate cancer	condition	malignant neoplasm of prostate
+colon cancer	condition	malignant neoplasm of colon
+colorectal cancer	condition	malignant neoplasm of colon
+sepsis	condition	sepsis
+cellulitis	condition	cellulitis
+abscess	condition	abscess
+hiv	condition	human immunodeficiency virus disease
+fever	symptom	fever
+chills	symptom	chills
+fatigue	symptom	fatigue
+malaise	symptom	malaise
+weight loss	symptom	abnormal weight loss
+lymphadenopathy	finding	lymphadenopathy
+# --- Skin / eye / ENT ---
+eczema	condition	atopic dermatitis
+atopic dermatitis	condition	atopic dermatitis
+contact dermatitis	condition	contact dermatitis
+psoriasis	condition	psoriasis
+acne	condition	acne vulgaris
+rash	symptom	rash
+urticaria	condition	urticaria
+pressure ulcer	condition	pressure ulcer
+cataract	condition	cataract
+glaucoma	condition	glaucoma
+conjunctivitis	condition	conjunctivitis
+otitis media	condition	otitis media
+acute otitis media	condition	acute otitis media
+otitis externa	condition	otitis externa
+ear pain	symptom	otalgia
+otalgia	symptom	otalgia
+sore throat	symptom	sore throat
+nasal congestion	symptom	nasal congestion
+hearing loss	condition	hearing loss
+# --- OB / GYN / other ---
+pregnancy	condition	pregnancy
+menorrhagia	condition	menorrhagia
+polycystic ovary syndrome	condition	polycystic ovarian syndrome
+pcos	condition	polycystic ovarian syndrome
+vaginitis	condition	vaginitis
+# --- Procedures (for CPT/HCPCS & documentation context) ---
+colonoscopy	procedure	colonoscopy
+upper endoscopy	procedure	esophagogastroduodenoscopy
+egd	procedure	esophagogastroduodenoscopy
+appendectomy	procedure	appendectomy
+laparoscopic appendectomy	procedure	laparoscopic appendectomy
+cholecystectomy	procedure	cholecystectomy
+laparoscopic cholecystectomy	procedure	laparoscopic cholecystectomy
+knee replacement	procedure	total knee arthroplasty
+total knee arthroplasty	procedure	total knee arthroplasty
+hip replacement	procedure	total hip arthroplasty
+cardiac catheterization	procedure	cardiac catheterization
+echocardiogram	procedure	echocardiography
+electrocardiogram	procedure	electrocardiogram
+ekg	procedure	electrocardiogram
+ecg	procedure	electrocardiogram
+chest x-ray	procedure	chest radiograph
+cxr	procedure	chest radiograph
+ct scan	procedure	computed tomography
+mri	procedure	magnetic resonance imaging
+biopsy	procedure	biopsy
+flu vaccine	procedure	influenza vaccination
+influenza vaccine	procedure	influenza vaccination
+laceration repair	procedure	laceration repair
+incision and drainage	procedure	incision and drainage
+i&d	procedure	incision and drainage
+spirometry	procedure	spirometry
+# --- Medications (drive "long-term drug therapy" Z79 codes and context) ---
+insulin	medication	insulin
+insulin glargine	medication	insulin
+lantus	medication	insulin
+metformin	medication	oral hypoglycemic
+glipizide	medication	oral hypoglycemic
+glyburide	medication	oral hypoglycemic
+sitagliptin	medication	oral hypoglycemic
+empagliflozin	medication	oral hypoglycemic
+semaglutide	medication	injectable non-insulin antidiabetic
+liraglutide	medication	injectable non-insulin antidiabetic
+dulaglutide	medication	injectable non-insulin antidiabetic
+warfarin	medication	anticoagulant
+apixaban	medication	anticoagulant
+rivaroxaban	medication	anticoagulant
+eliquis	medication	anticoagulant
+xarelto	medication	anticoagulant
+aspirin	medication	aspirin
+clopidogrel	medication	antiplatelet
+lisinopril	medication	antihypertensive
+losartan	medication	antihypertensive
+amlodipine	medication	antihypertensive
+hydrochlorothiazide	medication	antihypertensive
+metoprolol	medication	beta blocker
+carvedilol	medication	beta blocker
+furosemide	medication	diuretic
+atorvastatin	medication	statin
+simvastatin	medication	statin
+rosuvastatin	medication	statin
+levothyroxine	medication	thyroid hormone
+albuterol	medication	bronchodilator
+fluticasone	medication	inhaled corticosteroid
+prednisone	medication	systemic steroid
+omeprazole	medication	proton pump inhibitor
+pantoprazole	medication	proton pump inhibitor
+sertraline	medication	antidepressant
+escitalopram	medication	antidepressant
+fluoxetine	medication	antidepressant
+gabapentin	medication	gabapentin
+amoxicillin	medication	antibiotic
+azithromycin	medication	antibiotic
+ceftriaxone	medication	antibiotic
+nitrofurantoin	medication	antibiotic
+ciprofloxacin	medication	antibiotic
+ibuprofen	medication	nsaid
+naproxen	medication	nsaid
+acetaminophen	medication	acetaminophen
+oxycodone	medication	opioid

@@ -1,0 +1,9 @@
+EMERGENCY DEPARTMENT NOTE
+Chief Complaint: Chest pain.
+HPI: 55-year-old male with hypertension presents with 2 hours of intermittent chest pain. No radiation. Denies diaphoresis or shortness of breath.
+Physical Exam: Regular rhythm, no murmur. Lungs clear.
+Studies: EKG normal sinus rhythm without ST changes. Initial troponin negative.
+Assessment:
+1. Chest pain, rule out myocardial infarction
+2. Essential hypertension
+Plan: Serial troponins, observation, stress test if negative.

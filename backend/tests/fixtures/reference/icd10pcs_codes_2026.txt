@@ -1,0 +1,4 @@
+0DTJ4ZZ Resection of Appendix, Percutaneous Endoscopic Approach
+0FT40ZZ Resection of Gallbladder, Open Approach
+0FT44ZZ Resection of Gallbladder, Percutaneous Endoscopic Approach
+0SRD0J9 Replacement of Left Knee Joint with Synthetic Substitute, Cemented, Open Approach

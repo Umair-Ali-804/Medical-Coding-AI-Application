@@ -1,0 +1,8 @@
+CLINIC NOTE
+Chief Complaint: Fatigue.
+HPI: 47-year-old female with fatigue for 3 months. Denies melena, hematochezia or abdominal pain. Family history of colon cancer in her father at age 52.
+Labs: Hemoglobin 9.8, ferritin 6, MCV 72.
+Assessment:
+1. Iron deficiency anemia
+2. Family history of colon cancer
+Plan: Ferrous sulfate 325 mg daily. Refer for colonoscopy given family history.

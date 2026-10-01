@@ -1,0 +1,14 @@
+                                        PROCESSING NOTES
+ ____________________________________________________________________________________________________________________________________
+
+          0001--THIS PROCESSING NOTE DELETED 1/1/97.                                       *
+                                                                                           *
+          0002--THESE CODES (82585, 82595) PERTAIN TO PERFORMING THE ANALYSIS FOR THE      *
+                ANALYTE AS OPPOSED TO ADMINISTRATION OF THE ANALYTE.                       *
+                                                                                           *
+          0003--THIS PROCEDURE (85029, 85030) IS USUALLY PART OF THE AUTOMATED PROFILES    *
+                FOR CBC AND CONSIDERATION SHOULD BE GIVEN TO NOT PAYING SEPARATELY         *
+          0088--"S" CODES ARE UNIQUE TEMPORARY CODES ESTABLISHED BY BCBSA AND HIAA FOR     *
+                PRIVATE PAYOR USE. THEY ARE NOT VALID NOR PAYABLE BY MEDICARE.             *
+                                                                                           *
+          0089--REFER TO AB-99-52 SUSPENDING NON-COVERAGE PER CIM 35-98.                   *

@@ -1,0 +1,349 @@
+{
+  "name": "Medical Coding - Platform events",
+  "nodes": [
+    {
+      "id": "5743d473-f221-570f-ad24-c7cfcf8e9789",
+      "name": "Platform event",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "d2ceead7-7b97-54e6-944b-e52ee4b1675a",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "medcoding-events",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "notes": "Receives document.coded / document.finalized / document.failed events signed with HMAC-SHA256."
+    },
+    {
+      "id": "52553b37-76ec-5f2f-be01-a563cb1cd5bb",
+      "name": "Compute expected signature",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        220,
+        300
+      ],
+      "parameters": {
+        "action": "hmac",
+        "type": "SHA256",
+        "value": "={{ $json.headers['x-medcoding-timestamp'] + '.' + JSON.stringify($json.body) }}",
+        "dataPropertyName": "expected_signature",
+        "secret": "={{ $env.MEDCODING_WEBHOOK_SECRET }}",
+        "encoding": "hex"
+      }
+    },
+    {
+      "id": "36c2a0e8-aa84-5fc5-9aaa-4b3b8b8b5e56",
+      "name": "Signature valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        440,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "10748132-9907-5a12-8279-f52b9fa76af1",
+              "leftValue": "={{ $json.expected_signature }}",
+              "rightValue": "={{ $json.headers['x-medcoding-signature'] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "d82551e5-0edb-52dc-b6a2-b24e27061196",
+      "name": "Reject (401)",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        440
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ error: 'invalid signature' }) }}",
+        "options": {
+          "responseCode": 401
+        }
+      }
+    },
+    {
+      "id": "ebf06d70-212a-51a8-9e1b-4c2113ad25d9",
+      "name": "Acknowledge (200)",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        200
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ received: $json.body.id }) }}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    },
+    {
+      "id": "93135262-76ab-5f96-a721-06ee5263e4e3",
+      "name": "Finalized?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        880,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "e4c2cc96-dd8e-5e60-bccd-b0b2e054cecc",
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "document.finalized",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "ddb31174-bbcb-5e5d-abaf-98310306bc4f",
+      "name": "Fetch final codes",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        100
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "medcodingApiKey",
+          "name": "Medical Coding API key"
+        }
+      },
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.MEDCODING_API_URL }}/api/v1/documents/{{ $json.body.data.document_id }}/export?format=json",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      }
+    },
+    {
+      "id": "962a0ae6-af59-502c-a912-ae9a7840be4d",
+      "name": "Send to billing / EHR bridge",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1320,
+        100
+      ],
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.DOWNSTREAM_EXPORT_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "notes": "Replace with your integration (FHIR Claim, billing system, SFTP...)."
+    },
+    {
+      "id": "b7f4ed18-7038-5b1d-93cd-3762251cf340",
+      "name": "Needs attention?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        320
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "8c71c314-5e2b-5c54-bfed-53d157f68c45",
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "document.failed",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "a5a70b8e-8979-5635-8cf7-8148a79c5be0",
+              "leftValue": "={{ $json.body.data.review_route }}",
+              "rightValue": "mandatory",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "63e7e78d-0a25-558a-8284-5f72e0a1835d",
+      "name": "Alert team",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1320,
+        300
+      ],
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.REVIEW_ALERT_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: `[${$json.body.event}] document ${$json.body.data.document_id} ${$json.body.event === 'document.failed' ? 'FAILED processing (' + $json.body.data.error + ')' : 'needs mandatory coder review'}` }) }}",
+        "options": {
+          "timeout": 10000
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Platform event": {
+      "main": [
+        [
+          {
+            "node": "Compute expected signature",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compute expected signature": {
+      "main": [
+        [
+          {
+            "node": "Signature valid?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Signature valid?": {
+      "main": [
+        [
+          {
+            "node": "Acknowledge (200)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Reject (401)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Acknowledge (200)": {
+      "main": [
+        [
+          {
+            "node": "Finalized?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Finalized?": {
+      "main": [
+        [
+          {
+            "node": "Fetch final codes",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Needs attention?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch final codes": {
+      "main": [
+        [
+          {
+            "node": "Send to billing / EHR bridge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Needs attention?": {
+      "main": [
+        [
+          {
+            "node": "Alert team",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {},
+  "active": false,
+  "id": "mcaiEvents0001",
+  "tags": []
+}

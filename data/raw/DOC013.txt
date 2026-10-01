@@ -1,0 +1,9 @@
+CARDIOLOGY FOLLOW-UP
+Chief Complaint: Atrial fibrillation follow-up.
+HPI: 72-year-old male with atrial fibrillation on apixaban for stroke prevention. Occasional palpitations. Denies bleeding, syncope or chest pain.
+Medications: Apixaban 5 mg twice daily. Metoprolol 50 mg daily.
+Physical Exam: Irregularly irregular rhythm, rate 78.
+Assessment:
+1. Atrial fibrillation - rate controlled
+2. Long-term anticoagulation with apixaban
+Plan: Continue apixaban and metoprolol. Follow up in 6 months.
